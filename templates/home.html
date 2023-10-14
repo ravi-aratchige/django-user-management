@@ -1,18 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
+{% extends 'base/layout.html' %}
+
+{% block content %}
+
     <p>This is the home page</p>
-    <p>
+    <p>Currently signed in as: 
+        <strong>
         {% if user %}
             {{ user }}
         {% else %}
             Guest
         {% endif %}
+        </strong>
     </p>
-</body>
-</html>
+
+    <a href="/account/delete">Delete account</a>
+    <a href="/account/sign-out">Sign Out</a>
+    
+{% endblock content %}
