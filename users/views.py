@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .forms import RegistrationForm, LoginForm
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
 from core import views
 
 
@@ -42,4 +42,9 @@ def sign_up(request):
 
 
 def sign_out(request):
+    logout(request)
+    return redirect("/")
+
+
+def delete_account(request):
     pass
