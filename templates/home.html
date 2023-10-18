@@ -2,7 +2,7 @@
 
 {% block content %}
 
-    <p>This is the home page</p>
+    <p>Welcome to the home page</p>
     <p>Currently signed in as: 
         <strong>
         {% if user %}
@@ -13,7 +13,7 @@
         </strong>
     </p>
 
-    <a href="/account/delete">Delete account</a>
-    <a href="/account/sign-out">Sign Out</a>
+    <a href="/account/delete" class="btn btn-danger">Delete account</a>
+    <a href="/account/sign-out" class="btn btn-primary">Sign Out</a>
     
 {% endblock content %}
